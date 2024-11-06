@@ -1,19 +1,20 @@
 function fizzbuzz() {
     for (let i = 1; i < 101; i++) {
-        let output: string[] = [];
+        let output: string[] = []
+        let rules = {3: "Fizz", 5: "Buzz", 7: "Bang", 11: "Bong"}
 
-        const checkDivisor = (i: number, divisor: number, word: string) => {
+        const checkDivisor = (i: number, divisor: number) => {
             if (i % divisor === 0) {
-                output.push(word)
+                output.push(rules[divisor])
             }
         }
 
-        checkDivisor(i, 11, "Bong")
+        checkDivisor(i, 11)
 
         if (output.length === 0) {
-            checkDivisor(i, 3, "Fizz")
-            checkDivisor(i, 5, "Buzz")
-            checkDivisor(i, 7, "Bang")
+            checkDivisor(i, 3)
+            checkDivisor(i, 5)
+            checkDivisor(i, 7)
         }
 
         if (output.length === 0) {
