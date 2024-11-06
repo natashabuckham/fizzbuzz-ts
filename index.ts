@@ -1,6 +1,6 @@
 function fizzbuzz() {
-    for (let i = 1; i < 196; i++) {
-        
+    for (let i = 1; i < 256; i++) {
+
         let output: string[] = []
         let rules = {3: "Fizz", 5: "Buzz", 7: "Bang", 11: "Bong", 13: "Fezz"}
 
@@ -28,6 +28,8 @@ function fizzbuzz() {
 
         if (output.length === 0) {
             console.log(i)
+        } else if (checkDivisor(i, 17)) {
+            console.log(output.reverse().join(""))
         } else {
             console.log(output.join(""))
         }
