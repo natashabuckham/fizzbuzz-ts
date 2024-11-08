@@ -22,10 +22,12 @@ function fizzbuzz() {
             applyRule(i, 7)
         }
 
+        if (i % 17 === 0) {
+            output.reverse()
+        }
+
         if (output.length === 0) {
             console.log(i)
-        } else if (i % 17 === 0) {
-            console.log(output.reverse().join(""))
         } else {
             console.log(output.join(""))
         }
