@@ -1,5 +1,5 @@
 function fizzbuzz() {
-    for (let i = 1; i < 256; i++) {
+    for (let i = 1; i <= 255; i++) {
 
         let output: string[] = []
         let rules = {3: "Fizz", 5: "Buzz", 7: "Bang", 11: "Bong", 13: "Fezz"}
