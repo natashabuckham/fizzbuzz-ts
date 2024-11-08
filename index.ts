@@ -4,17 +4,13 @@ function fizzbuzz() {
         let output: string[] = []
         let rules = {3: "Fizz", 5: "Buzz", 7: "Bang", 11: "Bong", 13: "Fezz"}
 
-        const checkDivisor = (i: number, divisor: number): boolean => {
-            return i % divisor === 0
-        }
-
         const applyRule = (i: number, divisor: number) => {
-            if (checkDivisor(i, divisor)) {
+            if (i % divisor === 0) {
                 output.push(rules[divisor])
             }
         }
 
-        if (checkDivisor(i, 11)) {
+        if (i % 11 === 0) {
             applyRule(i, 13)
             applyRule(i, 11)
         }
@@ -28,7 +24,7 @@ function fizzbuzz() {
 
         if (output.length === 0) {
             console.log(i)
-        } else if (checkDivisor(i, 17)) {
+        } else if (i % 17 === 0) {
             console.log(output.reverse().join(""))
         } else {
             console.log(output.join(""))
