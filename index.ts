@@ -26,11 +26,7 @@ function fizzbuzz() {
             output.reverse()
         }
 
-        if (output.length === 0) {
-            console.log(i)
-        } else {
-            console.log(output.join(""))
-        }
+        output.length === 0 ? console.log(i) : console.log(output.join(""))
     }    
 }
 
